@@ -278,32 +278,69 @@ const personalProjects: Project[] = [
 
 const coverLetterSections = [
   {
-    title: "지원 동기",
-    placeholder:
-      "해당 회사와 직무에 지원하게 된 구체적인 이유를 작성하세요.\n\n예시) 저는 ○○○의 ○○ 서비스를 수년간 사용하며 ...",
-    guide:
-      '회사의 제품·문화·기술 스택과 본인의 관심사가 어떻게 맞닿아 있는지 구체적으로 서술하세요. "좋아서 지원했다"가 아닌, 왜 이 회사여야 하는지 설득력 있게 작성하는 것이 핵심입니다.',
+    question: "문제 해결을 위해 가장 깊이 몰입했던 경험",
+    answer: [
+      "스토어 전체 화면을 styled-components에서 PandaCSS로 전환한 경험입니다. 프로젝트 내 styled-components 지원 종료가 결정되면서 단순한 문법 변환이 아니라, 운영 중인 상품·주문·결제·멤버십·회원가입 화면 전체를 안전하게 마이그레이션해야 했습니다.",
+      "먼저 Tailwind CSS를 포함한 대안을 비교했습니다. 기존 컴포넌트 기반 개발 방식과의 적합성, 스타일 작성 편의성, 빌드 타임에 정적 CSS를 생성해 런타임 처리 비용을 줄일 수 있다는 점을 근거로 PandaCSS를 선택했습니다. 이후 공통 위젯부터 도메인별 화면까지 전환 순서를 정하고, 기존 기능 개발과 병행할 수 있도록 작업 단위를 나눴습니다.",
+      "가장 신경 쓴 부분은 화면이 정상적으로 보인다는 감각적인 판단에 의존하지 않는 것이었습니다. Playwright 기반 시각적 회귀 테스트를 구축해 주요 화면의 변경을 비교하고, 마이그레이션이 끝난 영역부터 styled-components 의존성을 단계적으로 제거했습니다. 최종적으로 스토어 전체 화면의 전환과 기존 의존성 제거를 완료했습니다.",
+      "이 경험을 통해 큰 규모의 기술 전환에서는 새로운 기술을 선택하는 것보다 전환 범위, 검증 방법과 종료 조건을 먼저 정의하는 것이 더 중요하다는 점을 배웠습니다.",
+    ],
   },
   {
-    title: "핵심 역량 및 경험",
-    placeholder:
-      "본인의 가장 임팩트 있는 경험을 STAR 형식으로 작성하세요.\n\n상황(Situation) — 과제(Task) — 행동(Action) — 결과(Result)",
-    guide:
-      "이력서의 나열식 bullet을 그대로 옮기지 마세요. 하나의 경험을 깊이 파고들어 사고 과정과 의사결정 근거까지 드러내야 합니다. 수치로 결과를 뒷받침하면 설득력이 높아집니다.",
+    question: "제가 생각하는 좋은 코드",
+    answer: [
+      "제가 생각하는 좋은 코드는 다음 사람이 변경 결과를 예측할 수 있는 코드입니다. 짧거나 영리한 코드보다 책임과 데이터의 소유권이 분명하고, 정상 흐름뿐 아니라 실패했을 때의 동작도 설명할 수 있는 코드가 좋다고 생각합니다.",
+      "Channel의 댓글·답글·미디어 상태관리 구조를 개선할 때 이 기준을 적용했습니다. 여러 Jotai atom에 서버 데이터와 UI 상태가 섞여 있어, 한 화면에서 데이터를 변경하면 다른 화면의 갱신 여부를 추적하기 어려웠습니다. 이를 TanStack Query 중심으로 전환하고 Query Key와 캐시 무효화 기준을 도메인별로 정리했습니다. 작성·삭제·좋아요에는 낙관적 업데이트를 적용하되, 실패 시 이전 상태로 복구되는 흐름도 함께 구성했습니다.",
+      "이 경험을 통해 좋은 코드는 단순히 추상화가 잘된 코드가 아니라 데이터의 원천, 변경 범위와 오류 복구 방식이 드러나는 코드라고 생각하게 됐습니다. 여기에 자동화된 검증과 문서가 더해졌을 때 비로소 동료가 안심하고 변경할 수 있는 코드가 된다고 생각합니다.",
+    ],
   },
   {
-    title: "협업 및 커뮤니케이션",
-    placeholder:
-      "팀 내 갈등을 해결하거나, 비개발 직군과 협업하여 성과를 낸 경험을 구체적으로 서술하세요.",
-    guide:
-      "개발자는 혼자 일하지 않습니다. 디자이너·PM·백엔드와의 협업 방식, 코드 리뷰 문화에 기여한 경험, 또는 기술 결정을 팀에 설득한 사례를 통해 소프트 스킬을 보여주세요.",
+    question: "꾸준히 실천하고 있는 학습 방법과 관점",
+    answer: [
+      "저는 기술을 기능 목록으로 학습하기보다, 실제 문제를 기준으로 가설을 세우고 작은 검증을 거쳐 선택하는 방식을 선호합니다. 공식 문서를 통해 기술의 동작 원리와 제약을 확인하고, 후보 기술을 비교한 뒤 현재 프로젝트에 필요한 기준을 먼저 정의합니다.",
+      "PandaCSS를 선택할 때는 Tailwind CSS 등과 사용 방식과 빌드 결과를 비교했고, App Router와 Cloudflare 전환 시에는 별도 환경에서 빌드·미들웨어·렌더링 동작을 검증한 뒤 전체 전환을 진행했습니다. 새로운 기술을 적용한 뒤에는 문제 해결 과정을 일회성으로 끝내지 않고 디렉터리 구조, 공통 패턴, 테스트나 문서로 남기려고 합니다.",
+      "최근에는 AI를 활용한 개발 과정도 같은 관점으로 다루고 있습니다. AI에게 바로 구현을 요청하기보다 요구사항, 비목표, 제약과 완료 조건을 먼저 정의하고 구현·리뷰·검증 단계를 분리합니다. 이를 반복적으로 활용하기 위해 Codex용 Runner 스킬을 직접 설계하고 개발했습니다.",
+      "빠르게 바뀌는 API를 많이 암기하는 것보다, 기술을 선택하는 기준과 결과를 검증하는 방법을 갖추는 것이 장기적으로 더 중요한 학습 역량이라고 생각합니다.",
+    ],
   },
   {
-    title: "성장 가능성 및 목표",
-    placeholder:
-      "입사 후 1년, 3년, 5년의 성장 방향과 이 회사에서 이루고 싶은 것을 작성하세요.",
-    guide:
-      '단순히 "열심히 하겠다"는 다짐보다는, 현재 부족한 부분을 인식하고 어떻게 채워갈 것인지, 이 회사에서 어떤 임팩트를 만들고 싶은지 구체적인 그림을 그려주세요.',
+    question: "지원 동기",
+    answer: [
+      "약 8년 동안 React와 Next.js를 기반으로 Store, Channel, Backoffice와 Partner Center를 구축하고 운영했습니다. 사용자용 서비스뿐 아니라 상품·결제·멤버십, 정산·권한·콘텐츠 관리처럼 운영자와 파트너의 업무가 연결되는 기능도 함께 경험했습니다.",
+      "B2B 플랫폼에서는 화면을 만드는 것보다 복잡한 권한과 업무 흐름을 사용자가 실수 없이 처리할 수 있도록 구조화하는 과정에 매력을 느낍니다. 파트너센터와 백오피스를 개발하며 정산, 통계, 권한, 엑셀 추출과 대용량 파일 업로드 기능을 경험했고, 운영 도구의 작은 불편이 실제 업무 비용으로 이어진다는 점을 배웠습니다.",
+      "글로벌 서비스 측면에서는 해외카드, UnionPay, 배송 국가, 다국어와 시간대 등 국가별로 달라지는 조건을 하나의 제품 안에서 안정적으로 다루는 문제에 관심이 있습니다.",
+      "그중에서도 가장 끌리는 영역은 콘텐츠 뷰어입니다. Channel에서 대량 피드 가상화, 무한 스크롤, 복수 이미지, 확대·축소, 라이브 PIP와 댓글 상태관리를 구현하며 콘텐츠의 로딩 방식과 인터랙션이 사용자 체감 품질에 직접 연결된다는 것을 경험했습니다. 이러한 경험을 바탕으로 복잡한 B2B 운영 조건과 글로벌 요구사항을 안정적인 콘텐츠 경험으로 연결하는 데 기여하고 싶어 지원했습니다.",
+    ],
+  },
+  {
+    question: "기술적으로 가장 어려웠던 문제",
+    answer: [
+      "가장 어려웠던 작업은 App Router 전환과 웹 성능·배포 인프라 개선을 하나의 작업으로 진행한 경험입니다. 저는 해당 작업의 프론트엔드 설계와 구현을 단독으로 담당했습니다.",
+      "Cloudflare 배포 환경으로 이전하는 과정에서 당시 대상 환경의 Pages Router 지원 제약을 확인했습니다. 이 문제를 단순한 라우터 교체로 정의하지 않고, 기존 페이지 단위 SSR 구조, 초기 렌더링 병목, 배포 비용과 장애 대응 구조를 함께 개선해야 하는 아키텍처 전환으로 정의했습니다.",
+      "먼저 getServerSideProps 중심의 구조를 서버 컴포넌트와 loading.tsx를 활용한 스트리밍 렌더링 구조로 변경했습니다. 페이지 특성에 따라 SSG·SSR을 구분하고, TanStack Query 캐시와 Next.js 재검증 정책을 구성해 반복 API 호출을 줄였습니다. 초기 렌더링을 차단하던 번역 데이터 로딩과 마스크 스크린을 제거하고, 이미지 Lazy Loading·WebP 변환·Code Splitting도 함께 적용했습니다.",
+      "배포 환경은 기존 Vercel을 유지한 상태에서 Cloudflare Pages·Workers 환경을 별도로 구축하고 통합 테스트 후 일괄 전환했습니다. Cloudflare 환경에 장애가 발생하면 환경 변수 값 변경만으로 추가 배포 없이 Vercel로 트래픽을 전환할 수 있는 Failover 구조도 구현했습니다.",
+      "Pages Router와 Vercel을 그대로 유지하는 대안은 비용과 배포 환경 전환 목표를 해결하지 못해 선택하지 않았습니다. 두 라우터를 장기간 병행하는 단계적 전환도 검토했지만, 레이아웃과 데이터 패칭 구조를 이중으로 관리하는 기간이 길어지는 문제가 있어 별도 환경에서 전체 전환과 테스트를 완료한 뒤 한 번에 교체하는 방식을 선택했습니다. Cloudflare 단일 환경만 운영하는 방안은 장애 시 복구 선택지가 사라지기 때문에 제외했습니다.",
+      "그 결과 FCP를 4.2초에서 1.1초로, Lighthouse 성능 점수를 61점에서 80점으로 개선했습니다. 주요 Web Vitals 측정 항목은 평균 47.6% 개선됐으며, Cloudflare 전환으로 월 인프라 비용을 $300 이상 절감했습니다.",
+    ],
+  },
+  {
+    question: "다른 직군·팀과 협업한 경험",
+    answer: [
+      "Native 채팅 기능을 Web·WebView로 전환할 수 있는지 검증한 PoC 경험이 있습니다. 처음에는 ‘채팅 기능을 웹으로 구현할 수 있는가’라는 기술 구현 문제로 시작했지만, 검토 과정에서 메시징 구조뿐 아니라 서비스 정책, 운영 방식과 시스템 아키텍처까지 변경해야 하는 과제임을 확인했습니다.",
+      "요구사항이 명확하지 않은 상태에서 바로 구현 범위를 확정하지 않고, 팀원들과 검증 기준부터 정리했습니다. 저는 MQTT 연결 안정성, 메시지 동기화와 clientId 충돌, 대량 메시지 렌더링과 메모리 사용량, 모바일 키보드·포커스·스크롤 UX를 검증했습니다. Native와 Web·WebView의 차이를 기술 문제와 정책 문제로 나누어 문서화하고, 각 항목이 실제 본 개발 범위와 운영 비용에 어떤 영향을 주는지 정리했습니다.",
+      "결과적으로 구현 자체는 가능하지만 기존 Native 수준을 충족하려면 서비스 정책과 시스템 구조 전반의 변경이 필요하고, 기대 효과보다 리스크가 크다는 결론을 도출했습니다. 이를 근거로 본격적인 개발 착수를 보류했습니다.",
+      "이 경험을 통해 협업에서 중요한 것은 자신의 대안을 설득하는 것이 아니라, 서로 다른 직군이 같은 기준으로 판단할 수 있도록 불확실한 문제를 검증 가능한 항목으로 바꾸는 것임을 배웠습니다. 때로는 구현을 완료하는 것보다 시작하지 않아야 할 이유를 명확하게 만드는 것이 더 큰 기여가 될 수 있다고 생각합니다.",
+    ],
+  },
+  {
+    question: "AI 도구를 활용해 개발 방식을 개선한 경험",
+    answer: [
+      "Codex를 자주 사용하면서 AI가 요구사항이 확정되기 전에 구현을 시작하거나, 긴 작업에서 기존 결정과 제약을 잃고, 리뷰와 수정이 반복되는 문제를 경험했습니다. 이를 해결하기 위해 에이전틱 소프트웨어 개발 워크플로인 Runner 스킬을 직접 설계하고 개발했습니다.",
+      "Runner에서는 구현 전에 목표·비목표·제약·완료 조건을 Requirement Contract로 작성하고 사용자 승인을 받도록 했습니다. 이후 Tech Lead 역할이 구현 계획을 작성하고 두 번째 승인을 받은 뒤에만 구현을 시작합니다. 구현 단계에서는 Spec, Executor, Reviewer와 Validator의 책임을 분리하고 State Store를 통해 각 역할에 필요한 정보만 전달하도록 구성했습니다.",
+      "작업은 작은 단위로 구현·검증·커밋하며, 자기 수정·역할별 리뷰·회귀 검증 횟수에 상한을 두어 무한 반복을 방지했습니다. 위험하거나 요구사항 범위를 변경하는 작업은 다시 승인을 받도록 했고, 전체 구현이 끝난 뒤에는 완료 조건을 기준으로 최종 검증과 제한된 개선 루프를 수행하도록 설계했습니다.",
+      "Runner를 실제 개발 작업과 개인 AI Assistant Platform인 AI Fairy 구현에 반복적으로 적용했습니다. 그 결과 AI를 단순한 코드 생성 도구가 아니라 요구사항 분석, 구현, 리뷰와 검증을 역할별로 수행하는 개발 시스템으로 활용할 수 있었습니다.",
+      "AI를 통해 구현 속도를 높이는 것만큼, 어떤 결정을 사람이 통제하고 결과를 어떻게 검증할지를 설계하는 것이 중요하다고 생각합니다.",
+    ],
   },
 ];
 
@@ -800,18 +837,6 @@ function CareerDetailView() {
 // ─── Cover Letter View ───────────────────────────────────────────────────────
 
 function CoverLetterView() {
-  const [values, setValues] = useState<Record<number, string>>(
-    {},
-  );
-  const [company, setCompany] = useState("");
-  const [position, setPosition] = useState("");
-
-  const today = new Date().toLocaleDateString("ko-KR", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
-
   return (
     <div
       className="w-full bg-white shadow-sm print:shadow-none"
@@ -821,119 +846,71 @@ function CoverLetterView() {
         label="자기소개서"
         name={profile.name}
         sub={
-          <div className="flex items-center gap-4 flex-wrap -mt-1">
-            <div className="flex items-center gap-2 print:hidden">
-              <label
-                className="text-[12px] text-muted-foreground"
-                style={mono()}
-              >
-                지원 회사
-              </label>
-              <input
-                value={company}
-                onChange={(e) => setCompany(e.target.value)}
-                placeholder="예: 카카오"
-                className="border border-border rounded-sm px-2.5 py-1 text-[12px] text-foreground bg-transparent focus:outline-none focus:border-primary transition-colors w-32"
-                style={mono()}
-              />
-            </div>
-            <div className="flex items-center gap-2 print:hidden">
-              <label
-                className="text-[12px] text-muted-foreground"
-                style={mono()}
-              >
-                지원 직무
-              </label>
-              <input
-                value={position}
-                onChange={(e) => setPosition(e.target.value)}
-                placeholder="예: Frontend Engineer"
-                className="border border-border rounded-sm px-2.5 py-1 text-[12px] text-foreground bg-transparent focus:outline-none focus:border-primary transition-colors w-44"
-                style={mono()}
-              />
-            </div>
-            {/* Print-only label */}
-            {(company || position) && (
-              <div
-                className="hidden print:flex gap-4 text-[12px] text-muted-foreground"
-                style={mono()}
-              >
-                {company && <span>지원 회사: {company}</span>}
-                {position && <span>지원 직무: {position}</span>}
-                <span>{today}</span>
-              </div>
-            )}
+          <div className="flex items-end justify-between gap-6 -mt-1 flex-wrap">
+            <p className="text-sm text-muted-foreground leading-relaxed max-w-xl font-light">
+              기술 선택의 기준부터 협업과 AI 활용 방식까지,
+              일하는 과정과 판단을 일곱 가지 질문으로
+              정리했습니다.
+            </p>
+            <span
+              className="text-[11px] text-primary tracking-[0.14em] uppercase"
+              style={mono()}
+            >
+              07 Questions · 07 Answers
+            </span>
           </div>
         }
       />
 
-      <div className="px-14 py-12 flex flex-col gap-10">
+      <div className="px-6 sm:px-14 py-10 sm:py-12">
         {coverLetterSections.map((sec, i) => (
-          <section key={sec.title}>
-            <div className="flex items-center gap-3 mb-4">
-              <span
-                className="text-[10px] tracking-[0.18em] uppercase font-medium text-primary"
-                style={mono()}
-              >
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <h2
-                className="text-lg font-normal text-foreground"
-                style={serif()}
-              >
-                {sec.title}
-              </h2>
-              <div className="flex-1 h-px bg-border" />
-            </div>
-
-            {/* Guide */}
-            <div className="mb-3 px-4 py-3 bg-muted/60 border-l-2 border-primary/30 print:hidden">
-              <p className="text-[12px] text-muted-foreground leading-relaxed font-light">
-                {sec.guide}
-              </p>
-            </div>
-
-            {/* Textarea — editable on screen, looks like prose on print */}
-            <textarea
-              value={values[i] ?? ""}
-              onChange={(e) =>
-                setValues((prev) => ({
-                  ...prev,
-                  [i]: e.target.value,
-                }))
-              }
-              placeholder={sec.placeholder}
-              rows={8}
-              className="w-full text-[14px] text-foreground leading-[1.9] font-light resize-none border border-border rounded-sm px-5 py-4 focus:outline-none focus:border-primary transition-colors bg-transparent placeholder:text-muted-foreground/50 print:border-0 print:px-0 print:py-0"
-            />
-
-            {/* Character count */}
-            <div className="flex justify-end mt-1 print:hidden">
-              <span
-                className="text-[11px] text-muted-foreground"
-                style={mono()}
-              >
-                {(values[i] ?? "").length} 자
-              </span>
-            </div>
-          </section>
-        ))}
-
-        {/* Signature block */}
-        <div className="pt-6 border-t border-border flex items-end justify-between flex-wrap gap-4">
-          <p className="text-[13px] text-muted-foreground font-light">
-            위 내용은 사실과 다름이 없음을 확인합니다.
-          </p>
-          <div
-            className="text-right text-[12px] text-muted-foreground"
-            style={mono()}
+          <article
+            key={sec.question}
+            className="py-10 first:pt-0 border-b border-border last:border-b-0 last:pb-0"
           >
-            <p>{today}</p>
-            <p className="mt-1 text-foreground font-medium">
-              {profile.name} (서명)
-            </p>
-          </div>
-        </div>
+            <div className="flex items-start gap-4 sm:gap-5">
+              <span
+                className="flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 border border-primary/25 bg-primary/5 text-[11px] text-primary shrink-0 rounded-sm"
+                style={mono()}
+              >
+                Q{String(i + 1).padStart(2, "0")}
+              </span>
+              <div className="pt-0.5 min-w-0">
+                <p
+                  className="text-[10px] tracking-[0.18em] uppercase font-medium text-primary mb-1.5"
+                  style={mono()}
+                >
+                  Question
+                </p>
+                <h2
+                  className="text-xl sm:text-[22px] font-normal text-foreground leading-snug"
+                  style={serif()}
+                >
+                  {sec.question}
+                </h2>
+              </div>
+            </div>
+
+            <div className="mt-6 sm:ml-[60px] pl-5 sm:pl-6 border-l-2 border-primary/15">
+              <p
+                className="text-[10px] tracking-[0.18em] uppercase font-medium text-muted-foreground mb-3"
+                style={mono()}
+              >
+                Answer
+              </p>
+              <div className="flex flex-col gap-4">
+                {sec.answer.map((paragraph) => (
+                  <p
+                    key={paragraph}
+                    className="text-[14px] text-foreground/90 leading-[1.9] font-light break-keep"
+                  >
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+            </div>
+          </article>
+        ))}
       </div>
     </div>
   );
@@ -964,7 +941,7 @@ const DOC_META: {
   {
     id: "cover",
     label: "자기소개서",
-    desc: "항목별 서술형 자기소개",
+    desc: "질문과 답변으로 구성된 자기소개",
     icon: PenLine,
   },
 ];
