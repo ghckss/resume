@@ -143,11 +143,6 @@ const careerDetails: Company[] = [
             detail:
               "이미지 바인딩, 캐시, 로깅과 앱별 디렉터리 구조를 정비하고 Cloudflare Pages·Workers 배포 환경을 구축했습니다. Cloudflare 환경 변수 값 변경만으로 추가 배포 없이 Vercel 환경으로 트래픽을 전환할 수 있는 Failover 컨트롤러를 구현했습니다.",
           },
-          {
-            title: "멀티 앱 CI/CD 구축",
-            detail:
-              "GitHub Actions에 CODEOWNERS, 앱별 Path Filter와 Slack 배포 알림을 적용했습니다. 변경된 앱만 검증·배포하도록 구성해 모노레포 환경에서 앱별 배포 범위를 분리했습니다.",
-          },
         ],
         issues: [
           {
