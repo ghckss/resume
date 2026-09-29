@@ -1,3 +1,74 @@
 @import './fonts.css';
 @import './tailwind.css';
 @import './theme.css';
+
+@media print {
+  @page {
+    size: A4;
+    margin: 8mm 0;
+  }
+
+  html,
+  body,
+  #root {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: visible !important;
+  }
+
+  html {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .pdf-document {
+    overflow: visible !important;
+  }
+
+  .pdf-document,
+  .pdf-document *:not(svg):not(path) {
+    font-family: Arial, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif !important;
+    font-variant-ligatures: none !important;
+    font-variant-numeric: lining-nums tabular-nums !important;
+    font-feature-settings: "liga" 0, "clig" 0, "kern" 0 !important;
+    font-kerning: none !important;
+    font-synthesis: none !important;
+  }
+
+  .ats-document {
+    width: 210mm;
+    min-height: auto;
+    padding: 15mm 18mm;
+    color: #111111;
+    background: #ffffff;
+  }
+
+  .print-avoid-break {
+    break-inside: avoid-page;
+    page-break-inside: avoid;
+  }
+
+  .print-keep-with-next {
+    break-after: avoid-page;
+    page-break-after: avoid;
+  }
+
+  .ats-document .ats-keep-with-next {
+    break-after: avoid-page;
+    page-break-after: avoid;
+  }
+
+  .ats-document .ats-entry {
+    break-inside: auto;
+    page-break-inside: auto;
+  }
+
+  .ats-document p,
+  .ats-document li,
+  .ats-document dt,
+  .ats-document dd {
+    orphans: 3;
+    widows: 3;
+  }
+}

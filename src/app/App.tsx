@@ -15,9 +15,9 @@ import {
 // ─── Data ───────────────────────────────────────────────────────────────────
 const profile = {
   name: "황호찬",
-  title: "Frontend Developer",
+  title: "Frontend Engineer",
   tagline:
-    "React·Next.js 기반 웹 서비스를 약 8년간 개발했습니다. 레거시 구조 전환, 웹 성능 최적화, 배포 인프라 개선과 기술 타당성 검증을 주도하며 서비스의 성능·비용·운영 안정성을 높여 왔습니다.",
+    "React와 Next.js로 약 8년간 웹 제품을 만들었습니다. 스토어, 콘텐츠 서비스와 운영 도구를 새로 만들거나 오래된 구조를 고쳤고, 상태관리·성능·배포 환경처럼 사용자 화면 밖의 문제도 직접 맡아왔습니다.",
   contact: {
     email: "ghckss93@gmail.com",
     phone: "010-9077-4782",
@@ -29,30 +29,31 @@ const profile = {
 
 const resume = {
   skills: {
-    Core: ["TypeScript", "JavaScript"],
-    Frameworks: ["React", "Next.js"],
-    Styling: ["Panda CSS"],
-    Testing: ["Playwright"],
+    Languages: ["TypeScript", "JavaScript"],
+    Frontend: ["React", "Next.js", "App Router"],
+    State: ["TanStack Query", "Jotai"],
+    Architecture: ["Turborepo", "SSR", "SSG"],
+    Platform: ["Cloudflare", "Vercel", "GitHub Actions"],
+    Quality: ["Playwright", "Lighthouse"],
   },
   experience: [
     {
       company: "노머스",
       role: "Frontend Engineer",
-      period: "2021.06 — 2026.07",
+      period: "2021.06 - 2026.07",
       points: [
-        "스토어 프론트엔드를 단독 설계·개발하고, 3인 프론트엔드 팀에서 채널·백오피스·파트너센터 등 주요 웹 서비스의 구조 설계, 과제 배분 및 운영 이슈 대응 총괄",
-        "스토어·채널을 Turborepo 기반 모노레포로 통합하고 공통 컴포넌트를 패키지화해 서비스 간 재사용 체계 구축",
-        "스토어 전체 화면을 styled-components에서 PandaCSS로 전환하고 Playwright 기반 시각적 회귀 테스트 구축",
-        "Toss Payments를 비롯한 국내외 결제·카드 등록·빌링키·0원 결제 처리 구현",
-        "채널의 댓글·미디어 서버 상태를 TanStack Query 중심으로 재설계하고 낙관적 업데이트·오류 롤백·캐시 무효화 구조 정비",
-        "App Router 전환과 렌더링·데이터 패칭·리소스 최적화를 병행해 FCP 4.2초 → 1.1초, Lighthouse 61점 → 80점 및 주요 Web Vitals 개선",
-        "Cloudflare/Wrangler 배포 환경과 추가 배포 없는 Failover 구조를 구축해 월 인프라 비용 $300 이상 절감",
+        "스토어 프론트엔드를 단독 설계·개발하고, 3인 프론트엔드 팀에서 채널·백오피스·파트너센터의 구조 설계, 과제 분리와 운영 이슈 대응 주도",
+        "스토어·채널을 Turborepo 모노레포로 통합하고 공통 컴포넌트를 패키지화해 서비스 간 재사용 기반 구축",
+        "App Router 전환과 렌더링·데이터 패칭·리소스 최적화로 FCP를 4.2초에서 1.1초로, Lighthouse 성능 점수를 61점에서 80점으로 개선",
+        "Cloudflare 배포 환경과 Vercel Failover 구조를 구축해 운영 안정성을 확보하고 월 인프라 비용을 $300 이상 절감",
+        "댓글·미디어 서버 상태를 TanStack Query 중심으로 바꾸고 낙관적 업데이트, 오류 복구와 캐시 갱신 기준을 한 흐름으로 정리",
+        "국내외 결제, 카드 등록, 빌링키와 0원 주문을 구현하고 운영 중 발견된 결제 예외를 보완",
       ],
     },
     {
       company: "넷스루",
       role: "Fullstack Developer",
-      period: "2018.05 — 2021.05",
+      period: "2018.05 - 2021.05",
       points: [
         "고객사 납품형 웹 분석·태그 관리 솔루션 개발 및 유지보수",
         "기존 Spring·Thymeleaf 환경에서 신규 프로젝트에 React 도입을 제안하고 사내 최초로 적용",
@@ -101,11 +102,11 @@ const careerDetails: Company[] = [
   {
     company: "노머스",
     role: "Frontend Engineer",
-    period: "2021.06 — 2026.07",
+    period: "2021.06 - 2026.07",
     employment: "정규직",
     team: "프론트엔드 팀",
     overview:
-      "스토어·채널·백오피스·파트너센터 등 주요 웹 서비스의 초기 구축과 운영을 담당했습니다. 스토어 프론트엔드는 단독으로 설계·개발했으며, 이후 3인 프론트엔드 팀에서 나머지 서비스의 구조 설계, 도메인별 작업 분리와 과제 배분을 주도했습니다. 또한 모노레포·App Router 전환, 배포 인프라와 CI/CD 구축, 결제 시스템 확장, 상태관리와 성능 개선 등 서비스 전반의 기술 개선을 제안하고 실행했습니다.",
+      "노머스에서 스토어·채널·백오피스·파트너센터를 처음 만들 때부터 운영까지 맡았습니다. 스토어 프론트엔드는 혼자 설계하고 개발했고, 이후 3인 프론트엔드 팀에서는 서비스 구조를 잡고 도메인별로 일을 나눴습니다. 모노레포와 App Router 전환, 배포 환경, 결제, 상태관리와 성능 개선도 직접 진행했습니다.",
     projects: [
       {
         name: "App Router 전환 및 웹 성능·배포 인프라 개선",
@@ -157,7 +158,7 @@ const careerDetails: Company[] = [
           },
         ],
         result:
-          "FCP 4.2초 → 1.1초, Lighthouse 성능 점수 61점 → 80점, 주요 Web Vitals 측정 항목 평균 47.6% 개선, 월 인프라 비용 $300 이상 절감. 최적화 이후 CS 채널에서 로딩 성능 관련 사용자 불편 제보가 감소하는 경향을 확인했습니다.",
+          "FCP를 4.2초에서 1.1초로, Lighthouse 성능 점수를 61점에서 80점으로 개선하고 주요 Web Vitals 측정 항목을 평균 47.6% 개선했습니다. Cloudflare 전환으로 월 인프라 비용을 $300 이상 절감했으며, 최적화 이후 CS 채널에서 로딩 성능 관련 사용자 불편 제보가 감소하는 경향을 확인했습니다.",
       },
       {
         name: "스토어 프론트엔드 현대화 및 결제 시스템 확장",
@@ -275,66 +276,66 @@ const coverLetterSections = [
   {
     question: "문제 해결을 위해 가장 깊이 몰입했던 경험",
     answer: [
-      "스토어 전체 화면을 styled-components에서 PandaCSS로 전환한 경험입니다. 프로젝트 내 styled-components 지원 종료가 결정되면서 단순한 문법 변환이 아니라, 운영 중인 상품·주문·결제·멤버십·회원가입 화면 전체를 안전하게 마이그레이션해야 했습니다.",
-      "먼저 Tailwind CSS를 포함한 대안을 비교했습니다. 기존 컴포넌트 기반 개발 방식과의 적합성, 스타일 작성 편의성, 빌드 타임에 정적 CSS를 생성해 런타임 처리 비용을 줄일 수 있다는 점을 근거로 PandaCSS를 선택했습니다. 이후 공통 위젯부터 도메인별 화면까지 전환 순서를 정하고, 기존 기능 개발과 병행할 수 있도록 작업 단위를 나눴습니다.",
-      "가장 신경 쓴 부분은 화면이 정상적으로 보인다는 감각적인 판단에 의존하지 않는 것이었습니다. Playwright 기반 시각적 회귀 테스트를 구축해 주요 화면의 변경을 비교하고, 마이그레이션이 끝난 영역부터 styled-components 의존성을 단계적으로 제거했습니다. 최종적으로 스토어 전체 화면의 전환과 기존 의존성 제거를 완료했습니다.",
-      "이 경험을 통해 큰 규모의 기술 전환에서는 새로운 기술을 선택하는 것보다 전환 범위, 검증 방법과 종료 조건을 먼저 정의하는 것이 더 중요하다는 점을 배웠습니다.",
+      "가장 오래 붙잡고 했던 일은 스토어의 styled-components를 PandaCSS로 바꾸는 작업이었습니다. 상품, 주문, 결제, 멤버십과 회원가입까지 운영 중인 화면 대부분이 대상이라서 단순히 문법만 바꿀 수는 없었습니다.",
+      "Tailwind CSS를 포함해 몇 가지 대안을 직접 써봤습니다. 기존 컴포넌트 작성 방식과 잘 맞는지, 스타일을 옮기기 편한지, 런타임 비용을 줄일 수 있는지를 비교한 뒤 PandaCSS를 골랐습니다. 공통 위젯부터 시작해 상품과 주문처럼 영역별로 순서를 정했고, 새 기능 개발을 멈추지 않아도 되도록 작업을 잘게 나눴습니다.",
+      "화면이 비슷해 보인다는 이유만으로 완료 처리하지 않으려고 Playwright 시각 회귀 테스트도 만들었습니다. 테스트를 통과한 영역부터 기존 의존성을 걷어냈고, 마지막에는 스토어 전체 화면과 styled-components 의존성을 모두 정리했습니다.",
+      "이 작업 이후에는 기술을 고르는 일보다 어디까지 바꾸고, 무엇으로 확인하고, 언제 끝났다고 볼지를 먼저 정하는 편이 됐습니다.",
     ],
   },
   {
     question: "제가 생각하는 좋은 코드",
     answer: [
-      "제가 생각하는 좋은 코드는 다음 사람이 변경 결과를 예측할 수 있는 코드입니다. 짧거나 영리한 코드보다 책임과 데이터의 소유권이 분명하고, 정상 흐름뿐 아니라 실패했을 때의 동작도 설명할 수 있는 코드가 좋다고 생각합니다.",
-      "Channel의 댓글·답글·미디어 상태관리 구조를 개선할 때 이 기준을 적용했습니다. 여러 Jotai atom에 서버 데이터와 UI 상태가 섞여 있어, 한 화면에서 데이터를 변경하면 다른 화면의 갱신 여부를 추적하기 어려웠습니다. 이를 TanStack Query 중심으로 전환하고 Query Key와 캐시 무효화 기준을 도메인별로 정리했습니다. 작성·삭제·좋아요에는 낙관적 업데이트를 적용하되, 실패 시 이전 상태로 복구되는 흐름도 함께 구성했습니다.",
-      "이 경험을 통해 좋은 코드는 단순히 추상화가 잘된 코드가 아니라 데이터의 원천, 변경 범위와 오류 복구 방식이 드러나는 코드라고 생각하게 됐습니다. 여기에 자동화된 검증과 문서가 더해졌을 때 비로소 동료가 안심하고 변경할 수 있는 코드가 된다고 생각합니다.",
+      "좋은 코드는 다음 사람이 고칠 때 덜 불안한 코드라고 생각합니다. 짧거나 영리한 코드보다는 누가 데이터를 가지고 있는지, 어디까지 바뀌는지, 실패하면 어떻게 돌아가는지가 보이는 코드를 선호합니다.",
+      "채널의 댓글·답글·미디어 상태관리를 고칠 때 이 기준을 적용했습니다. 당시에는 여러 Jotai atom에 서버 데이터와 화면 상태가 섞여 있어서, 한 곳을 수정하면 다른 화면이 언제 갱신되는지 따라가기 어려웠습니다. 서버 데이터는 TanStack Query로 옮기고 Query Key와 캐시 갱신 기준을 도메인별로 정리했습니다. 작성·삭제·좋아요는 먼저 화면에 반영하되 요청이 실패하면 이전 값으로 돌리게 했습니다.",
+      "추상화를 많이 했다는 것보다 변경 범위와 실패 경로를 코드에서 바로 확인할 수 있는지가 더 중요하다고 봅니다. 여기에 테스트와 짧은 문서가 있으면 다른 사람도 훨씬 편하게 손댈 수 있습니다.",
     ],
   },
   {
     question: "꾸준히 실천하고 있는 학습 방법과 관점",
     answer: [
-      "저는 기술을 기능 목록으로 학습하기보다, 실제 문제를 기준으로 가설을 세우고 작은 검증을 거쳐 선택하는 방식을 선호합니다. 공식 문서를 통해 기술의 동작 원리와 제약을 확인하고, 후보 기술을 비교한 뒤 현재 프로젝트에 필요한 기준을 먼저 정의합니다.",
-      "PandaCSS를 선택할 때는 Tailwind CSS 등과 사용 방식과 빌드 결과를 비교했고, App Router와 Cloudflare 전환 시에는 별도 환경에서 빌드·미들웨어·렌더링 동작을 검증한 뒤 전체 전환을 진행했습니다. 새로운 기술을 적용한 뒤에는 문제 해결 과정을 일회성으로 끝내지 않고 디렉터리 구조, 공통 패턴, 테스트나 문서로 남기려고 합니다.",
-      "최근에는 AI를 활용한 개발 과정도 같은 관점으로 다루고 있습니다. AI에게 바로 구현을 요청하기보다 요구사항, 비목표, 제약과 완료 조건을 먼저 정의하고 구현·리뷰·검증 단계를 분리합니다. 이를 반복적으로 활용하기 위해 Codex용 Runner 스킬을 직접 설계하고 개발했습니다.",
-      "빠르게 바뀌는 API를 많이 암기하는 것보다, 기술을 선택하는 기준과 결과를 검증하는 방법을 갖추는 것이 장기적으로 더 중요한 학습 역량이라고 생각합니다.",
+      "새 기술을 볼 때 API 목록부터 외우는 편은 아닙니다. 지금 겪고 있는 문제를 먼저 적고, 공식 문서에서 동작 방식과 제약을 확인한 뒤 작은 예제로 직접 돌려봅니다.",
+      "PandaCSS를 고를 때도 Tailwind CSS와 작성 방식, 빌드 결과를 비교했습니다. App Router와 Cloudflare를 도입할 때는 별도 환경을 만들어 빌드, 미들웨어와 렌더링이 예상대로 동작하는지 먼저 확인했습니다. 적용이 끝나면 그때 알게 된 내용을 디렉터리 구조, 공통 코드, 테스트나 문서 중 하나로 남기려고 합니다.",
+      "AI 도구도 비슷하게 사용합니다. 곧바로 코드를 만들어 달라고 하기보다 요구사항과 하지 않을 일, 제약과 완료 조건을 먼저 적습니다. 이 과정을 매번 반복하기 번거로워 Codex용 Runner 스킬도 직접 만들었습니다.",
+      "기술 이름을 많이 아는 것보다 선택할 때 쓸 기준과 결과를 확인하는 방법을 갖고 있는 편이 오래 도움이 됐습니다.",
     ],
   },
   {
     question: "지원 동기",
     answer: [
-      "약 8년 동안 React와 Next.js를 기반으로 Store, Channel, Backoffice와 Partner Center를 구축하고 운영했습니다. 사용자용 서비스뿐 아니라 상품·결제·멤버십, 정산·권한·콘텐츠 관리처럼 운영자와 파트너의 업무가 연결되는 기능도 함께 경험했습니다.",
-      "B2B 플랫폼에서는 화면을 만드는 것보다 복잡한 권한과 업무 흐름을 사용자가 실수 없이 처리할 수 있도록 구조화하는 과정에 매력을 느낍니다. 파트너센터와 백오피스를 개발하며 정산, 통계, 권한, 엑셀 추출과 대용량 파일 업로드 기능을 경험했고, 운영 도구의 작은 불편이 실제 업무 비용으로 이어진다는 점을 배웠습니다.",
-      "글로벌 서비스 측면에서는 해외카드, UnionPay, 배송 국가, 다국어와 시간대 등 국가별로 달라지는 조건을 하나의 제품 안에서 안정적으로 다루는 문제에 관심이 있습니다.",
-      "그중에서도 가장 끌리는 영역은 콘텐츠 뷰어입니다. Channel에서 대량 피드 가상화, 무한 스크롤, 복수 이미지, 확대·축소, 라이브 PIP와 댓글 상태관리를 구현하며 콘텐츠의 로딩 방식과 인터랙션이 사용자 체감 품질에 직접 연결된다는 것을 경험했습니다. 이러한 경험을 바탕으로 복잡한 B2B 운영 조건과 글로벌 요구사항을 안정적인 콘텐츠 경험으로 연결하는 데 기여하고 싶어 지원했습니다.",
+      "지난 8년 동안 스토어, 콘텐츠 서비스, 백오피스와 파트너센터를 만들고 운영했습니다. 사용자 화면뿐 아니라 상품, 결제, 멤버십, 정산과 권한처럼 운영자 업무와 맞닿은 기능도 계속 다뤘습니다.",
+      "제가 재미를 느끼는 지점은 복잡한 조건을 사용자가 실수하지 않는 화면과 흐름으로 바꾸는 일입니다. 정산이나 권한처럼 작은 불편도 매일 반복되면 실제 업무 시간이 늘어나는 모습을 봤고, 운영 도구를 만들 때는 기능 수보다 사용 순서와 예외 상황을 더 꼼꼼히 보게 됐습니다.",
+      "콘텐츠 서비스에서는 대량 피드, 무한 스크롤, 여러 이미지, 확대·축소, 라이브 PIP와 댓글을 구현했습니다. 이 일을 하면서 로딩 방식이나 작은 인터랙션 하나가 서비스의 체감 품질을 크게 바꾼다는 것도 알게 됐습니다.",
+      "다음 회사에서도 제품 화면만 만드는 역할보다는 사용자 경험과 운영 조건, 기술 구조를 함께 살펴야 하는 문제를 맡고 싶습니다.",
     ],
   },
   {
     question: "기술적으로 가장 어려웠던 문제",
     answer: [
-      "가장 어려웠던 작업은 App Router 전환과 웹 성능·배포 인프라 개선을 하나의 작업으로 진행한 경험입니다. 저는 해당 작업의 프론트엔드 설계와 구현을 단독으로 담당했습니다.",
-      "Cloudflare 배포 환경으로 이전하는 과정에서 당시 대상 환경의 Pages Router 지원 제약을 확인했습니다. 이 문제를 단순한 라우터 교체로 정의하지 않고, 기존 페이지 단위 SSR 구조, 초기 렌더링 병목, 배포 비용과 장애 대응 구조를 함께 개선해야 하는 아키텍처 전환으로 정의했습니다.",
-      "먼저 getServerSideProps 중심의 구조를 서버 컴포넌트와 loading.tsx를 활용한 스트리밍 렌더링 구조로 변경했습니다. 페이지 특성에 따라 SSG·SSR을 구분하고, TanStack Query 캐시와 Next.js 재검증 정책을 구성해 반복 API 호출을 줄였습니다. 초기 렌더링을 차단하던 번역 데이터 로딩과 마스크 스크린을 제거하고, 이미지 Lazy Loading·WebP 변환·Code Splitting도 함께 적용했습니다.",
-      "배포 환경은 기존 Vercel을 유지한 상태에서 Cloudflare Pages·Workers 환경을 별도로 구축하고 통합 테스트 후 일괄 전환했습니다. Cloudflare 환경에 장애가 발생하면 환경 변수 값 변경만으로 추가 배포 없이 Vercel로 트래픽을 전환할 수 있는 Failover 구조도 구현했습니다.",
-      "Pages Router와 Vercel을 그대로 유지하는 대안은 비용과 배포 환경 전환 목표를 해결하지 못해 선택하지 않았습니다. 두 라우터를 장기간 병행하는 단계적 전환도 검토했지만, 레이아웃과 데이터 패칭 구조를 이중으로 관리하는 기간이 길어지는 문제가 있어 별도 환경에서 전체 전환과 테스트를 완료한 뒤 한 번에 교체하는 방식을 선택했습니다. Cloudflare 단일 환경만 운영하는 방안은 장애 시 복구 선택지가 사라지기 때문에 제외했습니다.",
-      "그 결과 FCP를 4.2초에서 1.1초로, Lighthouse 성능 점수를 61점에서 80점으로 개선했습니다. 주요 Web Vitals 측정 항목은 평균 47.6% 개선됐으며, Cloudflare 전환으로 월 인프라 비용을 $300 이상 절감했습니다.",
+      "가장 난도가 높았던 일은 App Router 전환과 성능 개선, 배포 환경 이전을 한 번에 진행한 작업입니다. 프론트엔드 쪽 설계와 구현은 제가 맡았습니다.",
+      "Cloudflare 이전을 검토하다가 당시 환경에서 Pages Router 지원에 제약이 있다는 사실을 알게 됐습니다. 라우터만 바꾸면 끝나는 문제가 아니었습니다. 기존 SSR 구조, 느린 첫 화면, 배포 비용과 장애 시 복구 방법까지 같이 손봐야 했습니다.",
+      "getServerSideProps 중심의 페이지를 서버 컴포넌트와 loading.tsx를 쓰는 구조로 옮겼습니다. 페이지별로 SSG와 SSR을 나누고, TanStack Query 캐시와 Next.js 재검증 시점을 맞춰 같은 API를 반복 호출하지 않게 했습니다. 첫 화면을 막던 번역 데이터와 마스크 스크린도 없앴고 이미지 지연 로딩, WebP 변환과 코드 분할을 함께 적용했습니다.",
+      "기존 Vercel 환경은 바로 없애지 않았습니다. Cloudflare Pages와 Workers 환경을 따로 만든 뒤 통합 테스트를 마치고 한 번에 전환했습니다. 장애가 나면 새 배포 없이 환경 변수만 바꿔 Vercel로 트래픽을 돌릴 수 있게 했습니다.",
+      "두 라우터를 오래 같이 운영하는 방법도 검토했지만 레이아웃과 데이터 패칭을 이중으로 관리해야 해서 제외했습니다. Cloudflare만 남기는 방법도 복구 수단이 없어 선택하지 않았습니다.",
+      "전환 후 FCP는 4.2초에서 1.1초로 줄었고 Lighthouse 성능 점수는 61점에서 80점으로 올랐습니다. 주요 Web Vitals는 평균 47.6% 개선됐고 월 인프라 비용도 $300 이상 줄었습니다.",
     ],
   },
   {
     question: "다른 직군·팀과 협업한 경험",
     answer: [
-      "Native 채팅 기능을 Web·WebView로 전환할 수 있는지 검증한 PoC 경험이 있습니다. 처음에는 ‘채팅 기능을 웹으로 구현할 수 있는가’라는 기술 구현 문제로 시작했지만, 검토 과정에서 메시징 구조뿐 아니라 서비스 정책, 운영 방식과 시스템 아키텍처까지 변경해야 하는 과제임을 확인했습니다.",
-      "요구사항이 명확하지 않은 상태에서 바로 구현 범위를 확정하지 않고, 팀원들과 검증 기준부터 정리했습니다. 저는 MQTT 연결 안정성, 메시지 동기화와 clientId 충돌, 대량 메시지 렌더링과 메모리 사용량, 모바일 키보드·포커스·스크롤 UX를 검증했습니다. Native와 Web·WebView의 차이를 기술 문제와 정책 문제로 나누어 문서화하고, 각 항목이 실제 본 개발 범위와 운영 비용에 어떤 영향을 주는지 정리했습니다.",
-      "결과적으로 구현 자체는 가능하지만 기존 Native 수준을 충족하려면 서비스 정책과 시스템 구조 전반의 변경이 필요하고, 기대 효과보다 리스크가 크다는 결론을 도출했습니다. 이를 근거로 본격적인 개발 착수를 보류했습니다.",
-      "이 경험을 통해 협업에서 중요한 것은 자신의 대안을 설득하는 것이 아니라, 서로 다른 직군이 같은 기준으로 판단할 수 있도록 불확실한 문제를 검증 가능한 항목으로 바꾸는 것임을 배웠습니다. 때로는 구현을 완료하는 것보다 시작하지 않아야 할 이유를 명확하게 만드는 것이 더 큰 기여가 될 수 있다고 생각합니다.",
+      "네이티브 채팅을 Web·WebView로 옮길 수 있는지 확인하는 PoC를 진행한 적이 있습니다. 처음에는 웹에서 채팅을 만들 수 있는지만 보면 된다고 생각했지만, 살펴볼수록 메시징 구조뿐 아니라 서비스 정책과 운영 방식까지 바뀌는 일이었습니다.",
+      "요구사항이 아직 흐린 상태라 바로 구현부터 하지 않고 팀원들과 먼저 확인할 항목을 정했습니다. 저는 MQTT 연결, 메시지 동기화와 clientId 충돌, 대량 메시지의 메모리 사용량, 모바일 키보드·포커스·스크롤을 테스트했습니다. 네이티브와 웹의 차이는 기술 문제와 정책 문제로 나눠 문서에 적었고, 각 항목이 실제 개발 범위와 운영 비용을 얼마나 늘리는지도 함께 정리했습니다.",
+      "결론은 ‘만들 수는 있지만 지금 시작하지 않는 편이 낫다’였습니다. 기존 네이티브 수준을 맞추려면 서비스 정책과 시스템 구조를 넓게 바꿔야 했고, 기대 효과보다 위험과 비용이 컸습니다. 이 내용을 근거로 본 개발을 보류했습니다.",
+      "협업 결과가 항상 출시일 필요는 없다고 생각합니다. 여러 직군이 같은 자료를 보고 하지 않을 일을 결정할 수 있게 만든 것도 이 PoC의 성과였습니다.",
     ],
   },
   {
     question: "AI 도구를 활용해 개발 방식을 개선한 경험",
     answer: [
-      "Codex를 자주 사용하면서 AI가 요구사항이 확정되기 전에 구현을 시작하거나, 긴 작업에서 기존 결정과 제약을 잃고, 리뷰와 수정이 반복되는 문제를 경험했습니다. 이를 해결하기 위해 에이전틱 소프트웨어 개발 워크플로인 Runner 스킬을 직접 설계하고 개발했습니다.",
-      "Runner에서는 구현 전에 목표·비목표·제약·완료 조건을 Requirement Contract로 작성하고 사용자 승인을 받도록 했습니다. 이후 Tech Lead 역할이 구현 계획을 작성하고 두 번째 승인을 받은 뒤에만 구현을 시작합니다. 구현 단계에서는 Spec, Executor, Reviewer와 Validator의 책임을 분리하고 State Store를 통해 각 역할에 필요한 정보만 전달하도록 구성했습니다.",
-      "작업은 작은 단위로 구현·검증·커밋하며, 자기 수정·역할별 리뷰·회귀 검증 횟수에 상한을 두어 무한 반복을 방지했습니다. 위험하거나 요구사항 범위를 변경하는 작업은 다시 승인을 받도록 했고, 전체 구현이 끝난 뒤에는 완료 조건을 기준으로 최종 검증과 제한된 개선 루프를 수행하도록 설계했습니다.",
-      "Runner를 실제 개발 작업과 개인 AI Assistant Platform인 AI Fairy 구현에 반복적으로 적용했습니다. 그 결과 AI를 단순한 코드 생성 도구가 아니라 요구사항 분석, 구현, 리뷰와 검증을 역할별로 수행하는 개발 시스템으로 활용할 수 있었습니다.",
-      "AI를 통해 구현 속도를 높이는 것만큼, 어떤 결정을 사람이 통제하고 결과를 어떻게 검증할지를 설계하는 것이 중요하다고 생각합니다.",
+      "Codex를 계속 쓰다 보니 반복되는 문제가 보였습니다. 요구사항이 정해지기 전에 구현을 시작하거나, 작업이 길어지면 앞에서 정한 조건을 놓치고, 리뷰와 수정이 끝없이 이어지는 경우가 있었습니다. 그래서 이 과정을 제어하는 Runner 스킬을 직접 만들었습니다.",
+      "Runner는 코드를 쓰기 전에 목표, 하지 않을 일, 제약과 완료 조건부터 적게 합니다. 이 내용과 구현 계획을 각각 사람이 확인한 뒤에만 다음 단계로 넘어갑니다. 구현할 때는 요구사항 정리, 실행, 리뷰와 검증 역할을 나누고, 각 역할에는 필요한 정보만 전달합니다.",
+      "작업 단위도 작게 잘라 구현, 검증과 커밋을 반복합니다. 리뷰나 재시도 횟수에는 상한을 두었고, 범위가 바뀌거나 위험한 작업이 나오면 다시 확인을 받게 했습니다.",
+      "Runner는 실제 개발 업무와 개인 프로젝트인 AI Fairy에 계속 사용하고 있습니다. 덕분에 AI가 만든 결과를 매번 처음부터 확인하기보다 요구사항과 완료 조건을 기준으로 검토할 수 있게 됐습니다.",
+      "AI를 잘 쓰는 일은 더 많은 코드를 빨리 받는 것보다, 사람이 결정할 부분과 확인할 방법을 먼저 정하는 데 가깝다고 봅니다.",
     ],
   },
 ];
@@ -416,7 +417,7 @@ function DocHeader({
 function ResumeView() {
   return (
     <div
-      className="w-full bg-white shadow-sm print:shadow-none"
+      className="pdf-document w-full bg-white shadow-sm print:shadow-none"
       style={sans()}
     >
       <DocHeader
@@ -587,7 +588,7 @@ function ResumeView() {
 function CareerDetailView() {
   return (
     <div
-      className="w-full bg-white shadow-sm print:shadow-none"
+      className="pdf-document w-full bg-white shadow-sm print:shadow-none"
       style={sans()}
     >
       <DocHeader
@@ -715,7 +716,10 @@ function CareerDetailView() {
                       </p>
                       <div className="flex flex-col gap-5">
                         {proj.tasks.map((task, ti) => (
-                          <div key={ti} className="flex gap-4">
+                          <div
+                            key={ti}
+                            className="flex gap-4 print-avoid-break"
+                          >
                             <span
                               className="text-[11px] text-primary shrink-0 mt-0.5 w-5 text-right leading-tight"
                               style={mono()}
@@ -751,7 +755,7 @@ function CareerDetailView() {
                         {proj.issues!.map((issue, ii) => (
                           <div
                             key={ii}
-                            className="border border-border rounded-sm overflow-hidden"
+                            className="border border-border rounded-sm overflow-hidden print-avoid-break"
                           >
                             <div className="px-4 py-2.5 bg-muted/60 border-b border-border">
                               <p className="text-[12px] font-semibold text-foreground">
@@ -803,7 +807,7 @@ function CareerDetailView() {
 
                   {/* Result */}
                   {proj.result && (
-                    <div className="flex items-start gap-3 bg-primary/5 border border-primary/15 rounded-sm px-4 py-3">
+                    <div className="flex items-start gap-3 bg-primary/5 border border-primary/15 rounded-sm px-4 py-3 print-avoid-break">
                       <span
                         className="text-[10px] text-primary uppercase tracking-wider shrink-0 mt-0.5 font-medium whitespace-nowrap"
                         style={mono()}
@@ -834,7 +838,7 @@ function CareerDetailView() {
 function CoverLetterView() {
   return (
     <div
-      className="w-full bg-white shadow-sm print:shadow-none"
+      className="pdf-document w-full bg-white shadow-sm print:shadow-none"
       style={sans()}
     >
       <DocHeader
@@ -911,9 +915,207 @@ function CoverLetterView() {
   );
 }
 
+// ─── ATS Print Views ─────────────────────────────────────────────────────────
+
+function ATSHeader({ documentTitle }: { documentTitle: string }) {
+  return (
+    <header className="border-b-2 border-black pb-5 mb-7">
+      <p className="text-[11px] font-bold uppercase tracking-[0.12em] mb-2">
+        {documentTitle}
+      </p>
+      <h1 className="text-[28px] font-bold leading-tight">
+        {profile.name}
+      </h1>
+      <p className="text-[14px] font-semibold mt-1">
+        {profile.title}
+      </p>
+      <address className="not-italic mt-4 flex flex-col gap-1 text-[11px] leading-relaxed">
+        <p>Email: {profile.contact.email}</p>
+        <p>Phone: {profile.contact.phone}</p>
+        <p>GitHub: https://{profile.contact.github}</p>
+        <p>Location: {profile.contact.location}</p>
+      </address>
+    </header>
+  );
+}
+
+function ATSSectionTitle({ children }: { children: React.ReactNode }) {
+  return (
+    <h2 className="ats-keep-with-next text-[15px] font-bold border-b border-black pb-1.5 mb-4">
+      {children}
+    </h2>
+  );
+}
+
+function ATSResumeView() {
+  return (
+    <article className="ats-document pdf-document" lang="ko">
+      <ATSHeader documentTitle="이력서 (Resume)" />
+
+      <section className="mb-7">
+        <ATSSectionTitle>전문 요약 (Professional Summary)</ATSSectionTitle>
+        <p className="text-[12px] leading-[1.75]">{profile.tagline}</p>
+      </section>
+
+      <section className="mb-7">
+        <ATSSectionTitle>경력 (Work Experience)</ATSSectionTitle>
+        <div className="flex flex-col gap-6">
+          {resume.experience.map((experience) => (
+            <section key={experience.company} className="ats-entry">
+              <div className="ats-keep-with-next mb-2">
+                <h3 className="text-[13px] font-bold">
+                  {experience.company} | {experience.role}
+                </h3>
+                <p className="text-[11px] mt-0.5">
+                  {experience.period}
+                </p>
+              </div>
+              <ul className="list-disc pl-5 flex flex-col gap-1.5 text-[11px] leading-[1.65]">
+                {experience.points.map((point) => (
+                  <li key={point} className="print-avoid-break">
+                    {point}
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ))}
+        </div>
+      </section>
+
+      <section className="mb-7">
+        <ATSSectionTitle>기술 (Technical Skills)</ATSSectionTitle>
+        <dl className="flex flex-col gap-2 text-[11px] leading-relaxed">
+          {Object.entries(resume.skills).map(([category, items]) => (
+            <div key={category} className="grid grid-cols-[105px_1fr] gap-3">
+              <dt className="font-bold">{category}</dt>
+              <dd>{items.join(", ")}</dd>
+            </div>
+          ))}
+        </dl>
+      </section>
+
+      <section className="mb-7">
+        <ATSSectionTitle>자격증 (Certifications)</ATSSectionTitle>
+        {resume.certifications.map((certification) => (
+          <p key={certification.name} className="text-[11px] leading-relaxed">
+            {certification.name} | {certification.year}
+          </p>
+        ))}
+      </section>
+
+      <section>
+        <ATSSectionTitle>언어 (Languages)</ATSSectionTitle>
+        {resume.languages.map((language) => (
+          <p key={language.lang} className="text-[11px] leading-relaxed">
+            {language.lang} | {language.level}
+          </p>
+        ))}
+      </section>
+    </article>
+  );
+}
+
+function ATSCareerDetailView() {
+  return (
+    <article className="ats-document pdf-document" lang="ko">
+      <ATSHeader documentTitle="경력기술서 (Career Description)" />
+
+      {careerDetails.map((company) => (
+        <section key={company.company} className="mb-9">
+          <div className="ats-keep-with-next mb-4">
+            <h2 className="text-[17px] font-bold">
+              {company.company} | {company.role}
+            </h2>
+            <p className="text-[11px] mt-1">
+              {company.period} | {company.team} | {company.employment}
+            </p>
+          </div>
+          <p className="text-[11px] leading-[1.7] mb-6">
+            {company.overview}
+          </p>
+
+          <div className="flex flex-col gap-8">
+            {company.projects.map((project) => (
+              <section key={project.name} className="ats-entry">
+                <div className="ats-keep-with-next border-b border-black/30 pb-2 mb-3">
+                  <h3 className="text-[14px] font-bold">{project.name}</h3>
+                  <p className="text-[11px] mt-1">역할: {project.role}</p>
+                  <p className="text-[11px] mt-1">
+                    기술: {project.stack.join(", ")}
+                  </p>
+                </div>
+
+                <p className="text-[11px] leading-[1.7] mb-4">
+                  {project.summary}
+                </p>
+
+                <h4 className="ats-keep-with-next text-[12px] font-bold mb-2">
+                  주요 작업
+                </h4>
+                <ul className="list-disc pl-5 flex flex-col gap-2 text-[11px] leading-[1.65]">
+                  {project.tasks.map((task) => (
+                    <li key={task.title} className="print-avoid-break">
+                      <strong>{task.title}:</strong> {task.detail}
+                    </li>
+                  ))}
+                </ul>
+
+                {project.issues?.map((issue) => (
+                  <section
+                    key={issue.title}
+                    className="mt-4 print-avoid-break"
+                  >
+                    <h4 className="ats-keep-with-next text-[12px] font-bold mb-2">
+                      문제 해결: {issue.title}
+                    </h4>
+                    <dl className="text-[11px] leading-[1.65] flex flex-col gap-1.5">
+                      <div><dt className="inline font-bold">문제: </dt><dd className="inline">{issue.problem}</dd></div>
+                      <div><dt className="inline font-bold">해결: </dt><dd className="inline">{issue.solution}</dd></div>
+                      {issue.result && (
+                        <div><dt className="inline font-bold">결과: </dt><dd className="inline">{issue.result}</dd></div>
+                      )}
+                    </dl>
+                  </section>
+                ))}
+
+                <p className="mt-4 text-[11px] leading-[1.65] print-avoid-break">
+                  <strong>성과:</strong> {project.result}
+                </p>
+              </section>
+            ))}
+          </div>
+        </section>
+      ))}
+    </article>
+  );
+}
+
+function ATSCoverLetterView() {
+  return (
+    <article className="ats-document pdf-document" lang="ko">
+      <ATSHeader documentTitle="자기소개서 (Cover Letter)" />
+      <div className="flex flex-col gap-8">
+        {coverLetterSections.map((section, index) => (
+          <section key={section.question} className="ats-entry">
+            <h2 className="ats-keep-with-next text-[14px] font-bold mb-3">
+              질문 {index + 1}. {section.question}
+            </h2>
+            <div className="flex flex-col gap-3 text-[11px] leading-[1.75]">
+              {section.answer.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </div>
+          </section>
+        ))}
+      </div>
+    </article>
+  );
+}
+
 // ─── Print Dialog ─────────────────────────────────────────────────────────────
 
 type DocId = "resume" | "career" | "cover";
+type PrintMode = "ats" | "design";
 
 const DOC_META: {
   id: DocId;
@@ -936,7 +1138,7 @@ const DOC_META: {
   {
     id: "cover",
     label: "자기소개서",
-    desc: "질문과 답변으로 구성된 자기소개",
+    desc: "공고에서 요구할 때 선택",
     icon: PenLine,
   },
 ];
@@ -946,11 +1148,12 @@ function PrintDialog({
   onPrint,
 }: {
   onClose: () => void;
-  onPrint: (sel: DocId[]) => void;
+  onPrint: (sel: DocId[], mode: PrintMode) => void;
 }) {
   const [selected, setSelected] = useState<Set<DocId>>(
-    new Set(["resume", "career", "cover"]),
+    new Set(["resume", "career"]),
   );
+  const [mode, setMode] = useState<PrintMode>("ats");
 
   const toggle = (id: DocId) =>
     setSelected((prev) => {
@@ -975,7 +1178,7 @@ function PrintDialog({
       />
 
       {/* Dialog */}
-      <div className="relative bg-white rounded-sm shadow-xl w-full max-w-sm mx-4 overflow-hidden">
+      <div className="relative bg-white rounded-sm shadow-xl w-full max-w-md mx-4 overflow-hidden">
         {/* Header */}
         <div className="px-6 pt-6 pb-4 border-b border-border">
           <p
@@ -992,8 +1195,49 @@ function PrintDialog({
           </h2>
         </div>
 
+        <div className="px-6 pt-5">
+          <p className="text-[11px] font-medium text-foreground mb-2">
+            출력 형식
+          </p>
+          <div className="grid grid-cols-2 gap-2" role="group" aria-label="출력 형식">
+            <button
+              type="button"
+              aria-pressed={mode === "ats"}
+              onClick={() => setMode("ats")}
+              className={`p-3 border rounded-sm text-left transition-colors ${
+                mode === "ats" ? "border-primary bg-primary/5" : "border-border hover:bg-muted/60"
+              }`}
+            >
+              <span className="block text-[12px] font-semibold text-foreground">
+                ATS 제출용
+              </span>
+              <span className="block text-[10px] text-primary mt-1">
+                권장 · 단일 컬럼
+              </span>
+            </button>
+            <button
+              type="button"
+              aria-pressed={mode === "design"}
+              onClick={() => setMode("design")}
+              className={`p-3 border rounded-sm text-left transition-colors ${
+                mode === "design" ? "border-primary bg-primary/5" : "border-border hover:bg-muted/60"
+              }`}
+            >
+              <span className="block text-[12px] font-semibold text-foreground">
+                디자인 유지
+              </span>
+              <span className="block text-[10px] text-muted-foreground mt-1">
+                기존 레이아웃
+              </span>
+            </button>
+          </div>
+        </div>
+
         {/* Options */}
         <div className="px-6 py-5 flex flex-col gap-2">
+          <p className="text-[11px] font-medium text-foreground mb-1">
+            출력 문서
+          </p>
           {DOC_META.map(({ id, label, desc, icon: Icon }) => {
             const active = selected.has(id);
             return (
@@ -1071,7 +1315,7 @@ function PrintDialog({
             </button>
             <button
               onClick={() =>
-                ordered.length > 0 && onPrint(ordered)
+                ordered.length > 0 && onPrint(ordered, mode)
               }
               disabled={ordered.length === 0}
               className="flex items-center gap-1.5 px-4 py-2 text-[12px] bg-primary text-primary-foreground rounded-sm hover:bg-primary/90 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
@@ -1105,23 +1349,43 @@ export default function App() {
   const [tab, setTab] = useState<Tab>("resume");
   const [showDialog, setShowDialog] = useState(false);
   const [printDocs, setPrintDocs] = useState<DocId[]>([]);
+  const [printMode, setPrintMode] = useState<PrintMode>("ats");
 
-  const handlePrint = (sel: DocId[]) => {
+  const handlePrint = async (sel: DocId[], mode: PrintMode) => {
+    const previousTitle = document.title;
+    const selectedLabels = DOC_META.filter(({ id }) =>
+      sel.includes(id),
+    ).map(({ label }) => label);
+
+    document.title = `${profile.name}_${selectedLabels.join("_")}${
+      mode === "ats" ? "_ATS" : ""
+    }`;
+    setPrintMode(mode);
     setPrintDocs(sel);
     setShowDialog(false);
-    // Wait one frame for the print area to render, then print
-    requestAnimationFrame(() => {
+
+    await new Promise<void>((resolve) => {
       requestAnimationFrame(() => {
-        window.print();
-        // Reset after print dialog closes
-        setTimeout(() => setPrintDocs([]), 500);
+        requestAnimationFrame(() => resolve());
       });
     });
+
+    await document.fonts.ready;
+
+    window.addEventListener(
+      "afterprint",
+      () => {
+        document.title = previousTitle;
+        setPrintDocs([]);
+      },
+      { once: true },
+    );
+    window.print();
   };
 
   return (
     <div
-      className="min-h-screen bg-[#f5f4f0] flex flex-col items-center py-10 px-4 print:py-0 print:bg-white"
+      className="min-h-screen bg-[#f5f4f0] flex flex-col items-center py-10 px-4 print:py-0 print:px-0 print:bg-white"
       style={sans()}
     >
       {/* ── Screen UI (hidden on print) ── */}
@@ -1182,9 +1446,19 @@ export default function App() {
                   : {}
               }
             >
-              {id === "resume" && <ResumeView />}
-              {id === "career" && <CareerDetailView />}
-              {id === "cover" && <CoverLetterView />}
+              {printMode === "ats" ? (
+                <>
+                  {id === "resume" && <ATSResumeView />}
+                  {id === "career" && <ATSCareerDetailView />}
+                  {id === "cover" && <ATSCoverLetterView />}
+                </>
+              ) : (
+                <>
+                  {id === "resume" && <ResumeView />}
+                  {id === "career" && <CareerDetailView />}
+                  {id === "cover" && <CoverLetterView />}
+                </>
+              )}
             </div>
           ))}
         </div>
